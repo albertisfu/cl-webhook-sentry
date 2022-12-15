@@ -1,0 +1,9 @@
+# Run using `docker-compose up`
+version: "3.7"
+
+services:
+  proxy-webhook-sentry:
+    image: webhook-sentry
+    container_name: "cl-webhook-sentry"
+    ports:
+      - "9090:9090"

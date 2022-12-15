@@ -1,0 +1,26 @@
+cidrDenyList: [
+  "127.0.0.0/8",
+  "10.0.0.0/8",
+  "0.0.0.0/8",
+  "100.64.0.0/10",
+  "169.254.0.0/16",
+  "172.16.0.0/12",
+  "192.0.0.0/24",
+  "192.168.0.0/16",
+  "224.0.0.0/4",
+  "240.0.0.0/4"
+  ]
+listeners:
+  - type: http
+    address: ":9090"
+connectTimeout: 10s
+connectionLifetime: 60s
+readTimeout: 10s
+insecureSkipCertVerification: false
+insecureSkipCidrDenyList: false
+maxResponseBodySize: 1048576
+accessLog:
+  type: text
+proxyLog:
+  type: text
+requestIDHeader: Request-ID
